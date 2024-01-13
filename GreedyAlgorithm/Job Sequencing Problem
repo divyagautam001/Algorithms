@@ -3,7 +3,13 @@ Time Complexity: O(N log N) + O(N*M).
 O(N log N ) for sorting the jobs in decreasing order of profit. O(N*M) since we are iterating through all N jobs and for every job we are checking from the last deadline, say M deadlines in the worst case.
 
 Space Complexity: O(M) for an array that keeps track of which day job is performed if M is the maximum deadline available.❤️import java.io.*;
-import java.lang.*;
+
+Sort the jobs in descending order of profit. 
+If the maximum deadline is x, make an array of size x .Each array index is set to -1 initially as no jobs have been performed yet.
+For every job check if it can be performed on its last day.
+If possible mark that index with the job id and add the profit to our answer. 
+If not possible, loop through the previous indexes until an empty slot is found.
+❤️import java.lang.*;
 import java.util.*;
 
 class Job {
